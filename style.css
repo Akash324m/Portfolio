@@ -1,0 +1,269 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #111827; /* CHANGED: Deeper, more neutral dark gray */
+    color: #f9fafb; /* CHANGED: Brighter, cleaner white for text */
+    overflow-x: hidden;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Background - Tamed the stars to be more subtle */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="0.5" fill="%23f9fafb" opacity="0.5"/><circle cx="80" cy="30" r="0.3" fill="%23f9fafb" opacity="0.4"/><circle cx="40" cy="60" r="0.4" fill="%23f9fafb" opacity="0.5"/><circle cx="90" cy="80" r="0.2" fill="%23f9fafb" opacity="0.3"/><circle cx="10" cy="90" r="0.6" fill="%23f9fafb" opacity="0.6"/></svg>') repeat; /* CHANGED: Stars to off-white, reduced opacity */
+    animation: move-stars 50s linear infinite;
+}
+
+.twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="0.3" fill="%233b82f6" opacity="0.4"/><circle cx="75" cy="45" r="0.2" fill="%233b82f6" opacity="0.3"/><circle cx="50" cy="70" r="0.4" fill="%233b82f6" opacity="0.5"/></svg>') repeat; /* CHANGED: Twinkles to a subtle blue */
+    animation: move-twinkling 100s linear infinite;
+}
+
+@keyframes move-stars {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+@keyframes move-twinkling {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #2563eb, #4f46e5); /* CHANGED: Cyan/Blue -> Blue/Indigo */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Typewriter Effect */
+.typewriter h2 {
+    overflow: hidden;
+    border-right: 0.15em solid #3b82f6; /* CHANGED: Cyan -> Blue */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #3b82f6; } /* CHANGED: Cyan -> Blue */
+}
+
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Cards */
+.project-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); /* CHANGED: Cyan glow -> Blue glow */
+}
+
+/* Achievement Cards */
+.achievement-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2); /* CHANGED: Cyan glow -> Blue glow */
+}
+
+/* Skill Tags */
+.skill-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(55, 65, 81, 0.8), rgba(75, 85, 99, 0.8));
+    color: #3b82f6; /* CHANGED: Cyan -> Blue */
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(59, 130, 246, 0.2); /* CHANGED: Cyan -> Blue */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #2563eb, #4f46e5); /* CHANGED: Cyan/Blue -> Blue/Indigo */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -8px rgba(59, 130, 246, 0.4); /* CHANGED: Cyan -> Blue */
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(55, 65, 81, 0.6);
+    color: #3b82f6; /* CHANGED: Cyan -> Blue */
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(59, 130, 246, 0.3); /* CHANGED: Cyan -> Blue */
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(59, 130, 246, 0.1); /* CHANGED: Cyan -> Blue */
+    border-color: #3b82f6; /* CHANGED: Cyan -> Blue */
+}
+
+/* Navbar Scroll Effect */
+.navbar-scrolled {
+    background: rgba(17, 24, 39, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-bottom-color: rgba(55, 65, 81, 0.8);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2563eb, #4f46e5); /* CHANGED: Cyan/Blue -> Blue/Indigo */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #1d4ed8, #4338ca); /* CHANGED: Darker Blue/Indigo */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States */
+input:focus, textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* CHANGED: Cyan -> Blue */
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .typewriter h2 {
+        font-size: 1.5rem;
+    }
+    
+    .project-card, .achievement-card {
+        padding: 1.5rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+}
+
+/* Button Hover Effects */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Form Enhancements */
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2); /* CHANGED: Cyan -> Blue */
+}
+
+/* Card Hover Glow Effect */
+.card-glow:hover {
+    box-shadow: 
+        0 0 20px rgba(59, 130, 246, 0.3), /* CHANGED: Cyan -> Blue */
+        0 0 40px rgba(59, 130, 246, 0.2), /* CHANGED: Cyan -> Blue */
+        0 0 80px rgba(59, 130, 246, 0.1); /* CHANGED: Cyan -> Blue */
+}
