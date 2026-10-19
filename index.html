@@ -3,530 +3,891 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash Mishra - Data Scientist & AI Engineer</title>
+    <title>Akash Mishra | Python Developer</title>
+    <meta name="description" content="Portfolio of Akash Mishra - Python Developer specializing in backend systems (FastAPI, Flask), automation (Selenium), local RAG & LLM pipelines, and big data processing (PySpark, PostgreSQL).">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#090d16',
+                            800: '#0f172a',
+                            700: '#1e293b',
+                            600: '#334155'
+                        },
+                        accent: {
+                            sky: '#38bdf8',
+                            blue: '#3b82f6',
+                            indigo: '#6366f1',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
-    <!-- Animated Background -->
-    <div class="fixed inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-        <div class="stars"></div>
-        <div class="twinkling"></div>   
+<body class="antialiased selection:bg-sky-500/30 selection:text-sky-300">
+
+    <!-- High-Tech Grid & Ambient Lighting -->
+    <div class="bg-tech-grid"></div>
+    <div class="ambient-glow">
+        <div class="glow-orb-1"></div>
+        <div class="glow-orb-2"></div>
+        <div class="glow-orb-3"></div>
     </div>
 
     <!-- Header & Navigation -->
-    <header class="bg-gray-900/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-700/50 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-poppins font-bold text-white hover:text-cyan-400 transition-colors duration-300">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AM</span>
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-800/60 bg-slate-950/70 backdrop-blur-xl" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 p-[1px] shadow-lg shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all duration-300">
+                    <div class="w-full h-full bg-slate-950 rounded-xl flex items-center justify-center font-mono font-bold text-sky-400 group-hover:text-white transition-colors">
+                        AM
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-poppins font-bold text-lg text-white group-hover:text-sky-400 transition-colors">Akash Mishra</span>
+                    <span class="font-mono text-xs text-sky-400/80">&lt;Python Developer /&gt;</span>
+                </div>
             </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-300 hover:text-cyan-400 font-medium">Home</a>
-                <a href="#projects" class="nav-link text-gray-300 hover:text-cyan-400 font-medium">Projects</a>
-                <a href="#about" class="nav-link text-gray-300 hover:text-cyan-400 font-medium">About</a>
-                <a href="#achievements" class="nav-link text-gray-300 hover:text-cyan-400 font-medium">Achievements</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-cyan-400 font-medium">Contact</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-7">
+                <a href="#home" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Home</a>
+                <a href="#experience" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Experience</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Projects</a>
+                <a href="#skills" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Skills</a>
+                <a href="#education" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Education</a>
+                <a href="#achievements" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Achievements</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-sky-400 text-sm font-medium">Contact</a>
             </nav>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none hover:text-cyan-400 transition-colors duration-300">
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="Akash Resume.pdf" download="Akash_Mishra_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/40 text-sky-400 hover:bg-sky-500 hover:text-slate-950 font-medium text-xs transition-all duration-200 shadow-sm hover:shadow-sky-500/30">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Resume PDF
+                </a>
+            </div>
+
+            <!-- Mobile Menu Trigger -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" aria-label="Toggle navigation menu" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t border-gray-700/50 bg-gray-900/95 backdrop-blur-md">
-            <a href="#home" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">Home</a>
-            <a href="#projects" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">Projects</a>
-            <a href="#about" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">About</a>
-            <a href="#achievements" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">Achievements</a>
-            <a href="#contact" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pt-3 pb-6 border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Home</a>
+                <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Experience</a>
+                <a href="#projects" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Projects</a>
+                <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Skills</a>
+                <a href="#education" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Education</a>
+                <a href="#achievements" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Achievements</a>
+                <a href="#contact" class="block py-2 text-slate-300 hover:text-sky-400 text-base font-medium">Contact</a>
+                <div class="pt-3 border-t border-slate-800 flex gap-3">
+                    <a href="Akash Resume.pdf" download="Akash_Mishra_Resume.pdf" class="flex-1 text-center py-2.5 rounded-lg bg-sky-500 text-slate-950 font-semibold text-sm">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="relative z-10">
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="mb-8">
-                    <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 p-1">
-                        <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                            <span class="text-4xl font-bold text-white">AM</span>
+        <section id="home" class="min-h-screen pt-32 pb-20 px-6 flex items-center">
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Bio & CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-block">
+                        <div class="status-beacon">
+                            <span class="status-dot"></span>
+                            Available for Python Developer Roles & Internships
+                        </div>
+                    </div>
+
+                    <h1 class="font-poppins text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Hi, I'm <br class="hidden sm:block"/>
+                        <span class="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                            Akash Mishra
+                        </span>
+                    </h1>
+
+                    <div class="flex items-center gap-2 font-mono text-xl sm:text-2xl text-slate-200">
+                        <span class="text-sky-400 font-semibold">&gt;</span>
+                        <span id="typewriter-text" class="text-sky-400 font-medium">Python Developer</span>
+                        <span class="animate-pulse text-sky-400">|</span>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        Computer Science undergraduate at <span class="text-white font-medium">VIT Bhopal</span> with proven expertise in building high-performance 
+                        <span class="text-sky-400 font-medium">FastAPI</span> backends, keyword-driven <span class="text-sky-400 font-medium">Selenium</span> automation frameworks, 
+                        private <span class="text-sky-400 font-medium">LangChain & Ollama RAG pipelines</span>, and large-scale <span class="text-sky-400 font-medium">PySpark ETL</span> workflows.
+                    </p>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-3 py-2 max-w-xl">
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <div class="text-sky-400 font-bold font-mono text-xl sm:text-2xl">75%</div>
+                            <div class="text-xs text-slate-400 font-medium mt-0.5">Latency Reduction</div>
+                        </div>
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <div class="text-emerald-400 font-bold font-mono text-xl sm:text-2xl">170K+</div>
+                            <div class="text-xs text-slate-400 font-medium mt-0.5">Records Processed</div>
+                        </div>
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <div class="text-indigo-400 font-bold font-mono text-xl sm:text-2xl">80%</div>
+                            <div class="text-xs text-slate-400 font-medium mt-0.5">Reporting Automated</div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-slate-950 font-bold text-sm hover:from-sky-400 hover:to-blue-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-500/25 flex items-center gap-2">
+                            Explore Projects
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <a href="Akash Resume.pdf" download="Akash_Mishra_Resume.pdf" class="px-6 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700 hover:border-sky-500/60 text-slate-200 hover:text-white font-medium text-sm transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download Resume
+                        </a>
+                        <a href="Akash Resume.pdf" target="_blank" class="px-4 py-3.5 rounded-xl text-slate-400 hover:text-sky-400 text-sm font-medium transition-colors">
+                            Preview PDF &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Python Code Window -->
+                <div class="lg:col-span-5">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="terminal-dot bg-rose-500/80"></span>
+                                <span class="terminal-dot bg-amber-500/80"></span>
+                                <span class="terminal-dot bg-emerald-500/80"></span>
+                            </div>
+                            <span class="font-mono text-xs text-slate-400 flex items-center gap-1.5">
+                                <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                                developer_profile.py
+                            </span>
+                            <button id="copy-code-btn" title="Copy code" class="text-slate-400 hover:text-sky-400 p-1 rounded transition-colors text-xs flex items-center gap-1 font-mono">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                <span id="copy-code-label">copy</span>
+                            </button>
+                        </div>
+                        <div class="p-5 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto text-slate-300">
+<pre id="code-snippet"><code><span class="text-purple-400">from</span> dataclasses <span class="text-purple-400">import</span> dataclass
+<span class="text-purple-400">from</span> typing <span class="text-purple-400">import</span> List
+
+<span class="text-sky-400">@dataclass</span>
+<span class="text-purple-400">class</span> <span class="text-amber-300 font-bold">PythonDeveloper</span>:
+    name: str = <span class="text-emerald-400">"Akash Mishra"</span>
+    role: str = <span class="text-emerald-400">"Python Developer"</span>
+    location: str = <span class="text-emerald-400">"Delhi, India"</span>
+    education: str = <span class="text-emerald-400">"B.Tech CSE @ VIT Bhopal"</span>
+    
+    primary_skills: List[str] = (
+        <span class="text-emerald-400">"Python"</span>, <span class="text-emerald-400">"FastAPI"</span>, <span class="text-emerald-400">"Selenium"</span>,
+        <span class="text-emerald-400">"LangChain"</span>, <span class="text-emerald-400">"PySpark"</span>, <span class="text-emerald-400">"PostgreSQL"</span>
+    )
+    
+    <span class="text-purple-400">def</span> <span class="text-blue-400">solve_problem</span>(self, requirements):
+        <span class="text-purple-400">return</span> {
+            <span class="text-emerald-400">"backend"</span>: <span class="text-emerald-400">"FastAPI & PostgreSQL"</span>,
+            <span class="text-emerald-400">"automation"</span>: <span class="text-emerald-400">"Keyword-driven Selenium"</span>,
+            <span class="text-emerald-400">"intelligence"</span>: <span class="text-emerald-400">"Private Local RAG"</span>,
+            <span class="text-emerald-400">"throughput"</span>: <span class="text-emerald-400">"High-concurrency & Scalable"</span>
+        }
+
+<span class="text-slate-500"># Ready for impactful Python engineering roles</span>
+engineer = PythonDeveloper()</code></pre>
                         </div>
                     </div>
                 </div>
-                
-                <h1 class="font-poppins text-5xl md:text-7xl font-bold text-white leading-tight mb-4">
-                    <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Akash</span>
-                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Mishra</span>
-                </h1>
-                
-                <div class="typewriter inline-block mb-6">
-                    <h2 class="font-poppins text-2xl md:text-4xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                        Data Scientist & AI Engineer
+
+            </div>
+        </section>
+
+        <!-- Experience Section (NEW - from updated resume) -->
+        <section id="experience" class="py-24 px-6 border-t border-slate-800/60 bg-slate-950/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="font-mono text-xs font-semibold text-sky-400 tracking-wider uppercase bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Work Experience</span>
+                    <h2 class="font-poppins text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
+                        Industry <span class="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">Experience</span>
                     </h2>
+                    <p class="text-slate-400 text-base">
+                        Hands-on practical experience engineering Python automation frameworks, browser agents, and production monitoring systems.
+                    </p>
                 </div>
-                
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-                    Transforming data into intelligent solutions with cutting-edge machine learning, 
-                    advanced analytics, and innovative AI systems that drive real-world impact.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#projects" class="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-8 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                        <span class="flex items-center">
-                            View My Projects
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1xjNSdprWqDekU3EK1Q3rAWiWFcQuRTtK/view?usp=sharing" download="Akash_Mishra_Resume.pdf" class="group border-2 border-cyan-500 text-cyan-500 font-semibold py-4 px-8 rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                        <span class="flex items-center">
-                            Download Resume
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                        </span>
-                    </a>
+
+                <div class="max-w-4xl mx-auto relative">
+                    <!-- Timeline Stem -->
+                    <div class="timeline-stem"></div>
+
+                    <!-- FSSAI Experience Card -->
+                    <div class="relative pl-8 sm:pl-12 pb-8 reveal">
+                        <div class="timeline-node"></div>
+
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-700/70 hover:border-sky-500/50 transition-all duration-300 group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                                <div>
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="font-poppins text-xl sm:text-2xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                                            IT Intern
+                                        </h3>
+                                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/30">
+                                            Internship
+                                        </span>
+                                    </div>
+                                    <p class="text-slate-300 font-medium text-base mt-1">
+                                        FSSAI <span class="text-slate-500 text-sm font-normal">(Food Safety and Standards Authority of India)</span>
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-sky-400 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    May 2026 – July 2026
+                                </div>
+                            </div>
+
+                            <!-- Highlights / Responsibilities -->
+                            <ul class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed my-5">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400 mt-2 flex-shrink-0"></span>
+                                    <span>
+                                        Developed a <strong class="text-white">Python-based keyword-driven Selenium automation framework</strong> featuring reusable browser components, explicit waits, dynamic locators, YAML-configured workflows, and automated failure screenshots for end-to-end FoSCoS license application testing.
+                                    </span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-400 mt-2 flex-shrink-0"></span>
+                                    <span>
+                                        Created an <strong class="text-white">integrated Python automation and monitoring suite</strong> combining portal availability monitoring with SMTP alerts, reusable Selenium utilities, automated regression workflows, and an <strong class="text-sky-300">LLM-powered browser agent</strong> for dynamically analyzing and interacting with complex web applications.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <!-- Tech tags -->
+                            <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-800/80">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Selenium</span>
+                                <span class="tech-pill">YAML Workflows</span>
+                                <span class="tech-pill">LLM Browser Agents</span>
+                                <span class="tech-pill">SMTP Alerting</span>
+                                <span class="tech-pill">End-to-End Testing</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Scroll indicator -->
-            <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-            </div> -->
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6">
-            <div class="container mx-auto max-w-7xl">
-                <div class="text-center mb-16">
-                    <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-4 reveal">
-                        Featured <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
+        <section id="projects" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="font-mono text-xs font-semibold text-sky-400 tracking-wider uppercase bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Featured Work</span>
+                    <h2 class="font-poppins text-3xl sm:text-5xl font-bold text-white mt-3 mb-4">
+                        Flagship <span class="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Projects</span>
                     </h2>
-                    <p class="text-gray-400 text-lg max-w-2xl mx-auto reveal">
-                        Explore my latest work in data science, machine learning, and AI engineering
+                    <p class="text-slate-400 text-base sm:text-lg">
+                        Production-oriented Python applications spanning asynchronous web APIs, local RAG architectures, and distributed data analytics pipelines.
                     </p>
                 </div>
-                
-                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Project Card 1 -->
-                    <div class="project-card group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 reveal">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-sm text-gray-400 font-medium">Aug 2025</span>
-                        </div>
-                        
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                            FraudShield
-                        </h3>
-                        
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            Engineered a robust machine learning system to detect fraudulent transactions in 280k+ records using advanced SMOTE techniques for handling imbalanced datasets.
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tech-tag">LightGBM</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">SMOTE</span>
-                        </div>
-                        
-                        <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-sm text-gray-400">ROC-AUC Score</span>
-                                <span class="text-cyan-400 font-bold">96%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full" style="width: 96%"></div>
-                            </div>
-                            <p class="text-sm text-gray-300 mt-2">Reduced false positives by <span class="text-cyan-400 font-semibold">28x</span></p>
-                        </div>
-                        
-                        <a href="https://github.com/Akash324m/FraudShield" target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
-                            View on GitHub
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
 
-                    <!-- Project Card 2 -->
-                    <div class="project-card group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 reveal">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-sm text-gray-400 font-medium">Mar - May 2025</span>
-                        </div>
-                        
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                            Retainlytics
-                        </h3>
-                        
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            Built an interactive analytics dashboard analyzing 350k+ customer records to track lifecycle patterns and predict churn with actionable insights.
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Dash</span>
-                            <span class="tech-tag">Plotly</span>
-                        </div>
-                        
-                        <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span class="text-sm text-gray-400">Retention Drop</span>
-                                    <p class="text-red-400 font-bold text-lg">70%</p>
-                                </div>
-                                <div>
-                                    <span class="text-sm text-gray-400">Effort Saved</span>
-                                    <p class="text-green-400 font-bold text-lg">80%</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="https://github.com/Akash324m/Retainlytics" target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
-                            View on GitHub
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 reveal">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-sm text-gray-400 font-medium">Dec 2024 - Jan 2025</span>
-                        </div>
-                        
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                            BreezeDocs
-                        </h3>
-                        
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            Full-stack document automation platform leveraging OCR and NLP technologies to digitize, categorize, and process documents intelligently.
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">OCR</span>
-                        </div>
-                        
-                        <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span class="text-sm text-gray-400">Processing Reduction</span>
-                                    <p class="text-green-400 font-bold text-lg">70%</p>
-                                </div>
-                                <div>
-                                    <span class="text-sm text-gray-400">Monthly Docs</span>
-                                    <p class="text-cyan-400 font-bold text-lg">500+</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="https://github.com/Akash324m/BreezeDocs" target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
-                            View on GitHub
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- About Section -->
-        <section id="about" class="py-20 px-6">
-            <div class="container mx-auto max-w-7xl">
-                <div class="text-center mb-16">
-                    <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-4 reveal">
-                        About <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
-                    </h2>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <!-- About Content -->
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 reveal">
-                        <div class="mb-8">
-                            <h3 class="font-poppins text-2xl font-bold text-white mb-6">My Journey</h3>
-                            <p class="text-gray-300 leading-relaxed mb-6">
-                                I'm a passionate Data Scientist and AI Engineer currently pursuing B.Tech at VIT Bhopal University. 
-                                My journey in technology is driven by a deep fascination with how data can be transformed into 
-                                intelligent solutions that solve real-world problems.
-                            </p>
-                            <p class="text-gray-300 leading-relaxed">
-                                With expertise spanning machine learning, data analytics, and full-stack development, I specialize 
-                                in creating end-to-end solutions that bridge the gap between complex algorithms and practical applications. 
-                                My experience includes fraud detection systems, customer analytics platforms, and document automation tools.
-                            </p>
-                        </div>
-                        
-                        <!-- Education Timeline -->
+                <div class="grid gap-8 lg:grid-cols-3">
+                    
+                    <!-- Project 1: DocsFlow -->
+                    <div class="project-card glass-panel p-7 flex flex-col justify-between reveal group">
                         <div>
-                            <h3 class="font-poppins text-xl font-bold text-white mb-6">Education</h3>
-                            <div class="relative">
-                                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-blue-500"></div>
-                                
-                                <div class="relative pl-12 pb-8">
-                                    <div class="absolute left-2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-gray-900"></div>
-                                    <div class="bg-gray-800/30 p-4 rounded-lg">
-                                        <h4 class="font-semibold text-white">B.Tech - Computer Science Engineering</h4>
-                                        <p class="text-cyan-400 text-sm font-medium">VIT Bhopal University</p>
-                                        <p class="text-gray-400 text-sm">2022 - Present</p>
-                                    </div>
+                            <!-- Header -->
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-blue-600/20 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
                                 </div>
-                                
-                                <div class="relative pl-12 pb-8">
-                                    <div class="absolute left-2 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                                    <div class="bg-gray-800/30 p-4 rounded-lg">
-                                        <h4 class="font-semibold text-white">12th Grade</h4>
-                                        <p class="text-cyan-400 text-sm font-medium">Fr Agnel School</p>
-                                        <p class="text-gray-400 text-sm">2021 - 2022</p>
-                                    </div>
+                                <span class="font-mono text-xs text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded border border-slate-800">
+                                    Mar – Apr 2026
+                                </span>
+                            </div>
+
+                            <h3 class="font-poppins text-2xl font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+                                DocsFlow
+                            </h3>
+                            <p class="text-sky-400 font-mono text-xs mb-4">FastAPI • LangChain • Ollama • PostgreSQL</p>
+
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Asynchronous document intelligence and processing platform cutting manual retrieval time by 75%. Features a local RAG pipeline using LangChain and Ollama for secure semantic search and automated structured data extraction, backed by automated Pandas ETL workflows.
+                            </p>
+
+                            <!-- Key Metrics -->
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">Retrieval Time</span>
+                                    <span class="text-sky-400 font-mono font-bold text-base">75% Faster</span>
                                 </div>
-                                
-                                <div class="relative pl-12">
-                                    <div class="absolute left-2 w-4 h-4 bg-purple-500 rounded-full border-4 border-gray-900"></div>
-                                    <div class="bg-gray-800/30 p-4 rounded-lg">
-                                        <h4 class="font-semibold text-white">10th Grade</h4>
-                                        <p class="text-cyan-400 text-sm font-medium">Fr Agnel School</p>
-                                        <p class="text-gray-400 text-sm">2019 - 2020</p>
-                                    </div>
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">RAG Pipeline</span>
+                                    <span class="text-emerald-400 font-mono font-bold text-base">Local & Private</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">LangChain</span>
+                                <span class="tech-pill">Ollama</span>
+                                <span class="tech-pill">PostgreSQL</span>
+                                <span class="tech-pill">Pandas ETL</span>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                                <a href="https://github.com/Akash324m/DocsFlow" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    View Repository
+                                </a>
+                                <span class="text-xs text-slate-500 font-mono">ETL & RAG</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Skills Section -->
-                    <div class="space-y-8">
-                        <!-- Technical Skills -->
-                        <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 reveal">
-                            <h3 class="font-poppins text-2xl font-bold text-white mb-6">Technical Skills</h3>
-                            
-                            <div class="space-y-6">
-                                <div>
-                                    <h4 class="font-semibold text-cyan-400 mb-3">Programming Languages</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="skill-tag">Python</span>
-                                        <span class="skill-tag">Go</span>
-                                        <span class="skill-tag">SQL</span>
-                                        <span class="skill-tag">VBA</span>
-                                    </div>
+
+                    <!-- Project 2: OrderSight -->
+                    <div class="project-card glass-panel p-7 flex flex-col justify-between reveal group">
+                        <div>
+                            <!-- Header -->
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
                                 </div>
-                                
-                                <div>
-                                    <h4 class="font-semibold text-cyan-400 mb-3">Libraries & Frameworks</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="skill-tag">Pandas</span>
-                                        <span class="skill-tag">NumPy</span>
-                                        <span class="skill-tag">Scikit-learn</span>
-                                        <span class="skill-tag">Matplotlib</span>
-                                        <span class="skill-tag">OpenCV</span>
-                                        <span class="skill-tag">Flask</span>
-                                    </div>
+                                <span class="font-mono text-xs text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded border border-slate-800">
+                                    Sep – Oct 2025
+                                </span>
+                            </div>
+
+                            <h3 class="font-poppins text-2xl font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+                                OrderSight
+                            </h3>
+                            <p class="text-indigo-400 font-mono text-xs mb-4">Python • PySpark • Qlik Sense • Star Schema</p>
+
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Scalable PySpark data engineering pipeline to clean, validate, and process 170K+ e-commerce transaction records. Integrated automated rejected-record handling, star schema data modeling, and interactive Qlik executive KPI dashboards.
+                            </p>
+
+                            <!-- Key Metrics -->
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">Orders Cleaned</span>
+                                    <span class="text-indigo-400 font-mono font-bold text-base">170K+ Records</span>
                                 </div>
-                                
-                                <div>
-                                    <h4 class="font-semibold text-cyan-400 mb-3">Tools & Platforms</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="skill-tag">Git</span>
-                                        <span class="skill-tag">GitHub</span>
-                                        <span class="skill-tag">VS Code</span>
-                                        <span class="skill-tag">Jupyter</span>
-                                        <span class="skill-tag">Excel</span>
-                                    </div>
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">Data Model</span>
+                                    <span class="text-sky-400 font-mono font-bold text-base">Star Schema</span>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Certifications -->
-                        <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 reveal">
-                            <h3 class="font-poppins text-2xl font-bold text-white mb-6">Certifications</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                                    <div>
-                                        <h4 class="text-white font-medium">IBM Data Analyst - Coursera</h4>
-                                        <p class="text-gray-400 text-sm">Python, SQL, Excel, Data Visualization</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                                    <div>
-                                        <h4 class="text-white font-medium">GenAI using IBM WatsonX - IBM Adroit</h4>
-                                        <p class="text-gray-400 text-sm">Generative AI, Machine Learning</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                                    <div>
-                                        <h4 class="text-white font-medium">IBM AI Engineering - Coursera</h4>
-                                        <p class="text-gray-400 text-sm">Deep Learning, Neural Networks</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                                    <div>
-                                        <h4 class="text-white font-medium">Marketing Analytics - NPTEL</h4>
-                                        <p class="text-gray-400 text-sm">Customer Segmentation, Campaign Analysis</p>
-                                    </div>
-                                </div>
+
+                        <div>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="tech-pill">PySpark</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Qlik Sense</span>
+                                <span class="tech-pill">Data Pipelines</span>
+                                <span class="tech-pill">KPI Modeling</span>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                                <a href="https://github.com/Akash324m/OrderSight" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    View Repository
+                                </a>
+                                <span class="text-xs text-slate-500 font-mono">Big Data</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 3: Retainlytics -->
+                    <div class="project-card glass-panel p-7 flex flex-col justify-between reveal group">
+                        <div>
+                            <!-- Header -->
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-mono text-xs text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded border border-slate-800">
+                                    Mar – May 2025
+                                </span>
+                            </div>
+
+                            <h3 class="font-poppins text-2xl font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+                                Retainlytics
+                            </h3>
+                            <p class="text-emerald-400 font-mono text-xs mb-4">Python • Pandas • NumPy • Dash • Plotly</p>
+
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Data analysis and cohort retention pipeline processing 350K+ records. Segments user acquisition cohorts across a 12-month lifecycle, visualizing user LTV and retention on interactive Dash/Plotly dashboards while slashing reporting effort by 80%.
+                            </p>
+
+                            <!-- Key Metrics -->
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">Records Analyzed</span>
+                                    <span class="text-emerald-400 font-mono font-bold text-base">350K+ Rows</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="text-xs text-slate-400 block">Reporting Time</span>
+                                    <span class="text-sky-400 font-mono font-bold text-base">80% Reduced</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Pandas</span>
+                                <span class="tech-pill">NumPy</span>
+                                <span class="tech-pill">Dash / Plotly</span>
+                                <span class="tech-pill">Cohort LTV</span>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                                <a href="https://github.com/Akash324m/Retainlytics" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    View Repository
+                                </a>
+                                <span class="text-xs text-slate-500 font-mono">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Achievements Section -->
-        <section id="achievements" class="py-20 px-6">
-            <div class="container mx-auto max-w-7xl">
-                <div class="text-center mb-16">
-                    <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-4 reveal">
-                        <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Achievements</span>
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-24 px-6 border-t border-slate-800/60 bg-slate-950/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="font-mono text-xs font-semibold text-sky-400 tracking-wider uppercase bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Skillset</span>
+                    <h2 class="font-poppins text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
+                        Technical <span class="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">Capabilities</span>
                     </h2>
-                    <p class="text-gray-400 text-lg max-w-2xl mx-auto reveal">
-                        Recognition and accomplishments in technology and innovation
+                    <p class="text-slate-400 text-base">
+                        Proficiencies aligned with modern Python backend engineering, AI/LLM toolchains, and data pipelines.
                     </p>
                 </div>
-                
-                <div class="grid gap-8 md:grid-cols-3">
-                    <div class="achievement-card bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 text-center reveal">
-                        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3">Smart India Hackathon 2024</h3>
-                        <p class="text-gray-300 leading-relaxed">College Nominee for national finals in the Hardware Edition, representing innovative solutions in embedded systems.</p>
-                    </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
-                    <div class="achievement-card bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 text-center reveal">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                    <!-- Card 1: Programming Languages -->
+                    <div class="skill-card reveal">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins font-bold text-white text-lg">Languages</h3>
+                                <p class="text-xs text-slate-400">Core execution engines</p>
+                            </div>
                         </div>
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3">Line Following Robo Race</h3>
-                        <p class="text-gray-300 leading-relaxed">1st Runner-Up out of 20+ teams, demonstrating excellence in robotics and embedded systems programming.</p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-item text-sky-300 font-semibold border-sky-500/40">Python</span>
+                            <span class="skill-item">SQL</span>
+                        </div>
                     </div>
+
+                    <!-- Card 2: AI & LLMs -->
+                    <div class="skill-card reveal">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins font-bold text-white text-lg">AI & LLMs</h3>
+                                <p class="text-xs text-slate-400">RAG & semantic systems</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-item">LangChain</span>
+                            <span class="skill-item">Ollama</span>
+                            <span class="skill-item">RAG Pipelines</span>
+                            <span class="skill-item">HuggingFace</span>
+                            <span class="skill-item">Scikit-Learn</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Frameworks & Libraries -->
+                    <div class="skill-card reveal">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins font-bold text-white text-lg">Libraries & Frameworks</h3>
+                                <p class="text-xs text-slate-400">Backend & distributed data</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">Selenium</span>
+                            <span class="skill-item">PySpark</span>
+                            <span class="skill-item">Pandas / NumPy</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Databases -->
+                    <div class="skill-card reveal">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins font-bold text-white text-lg">Databases</h3>
+                                <p class="text-xs text-slate-400">Relational & structured data</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">Star Schema</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Tools & Platforms -->
+                    <div class="skill-card reveal md:col-span-2 lg:col-span-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins font-bold text-white text-lg">Tools & Platforms</h3>
+                                <p class="text-xs text-slate-400">Development environment & visualization</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitHub</span>
+                            <span class="skill-item">VS Code</span>
+                            <span class="skill-item">MS Excel</span>
+                            <span class="skill-item">Qlik Sense</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Achievements Section -->
+        <section id="education" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12">
                     
-                    <div class="achievement-card bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 text-center reveal">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+                    <!-- Education Column (5 cols) -->
+                    <div class="lg:col-span-5 space-y-8 reveal">
+                        <div>
+                            <span class="font-mono text-xs font-semibold text-sky-400 tracking-wider uppercase bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Academic Background</span>
+                            <h2 class="font-poppins text-3xl font-bold text-white mt-3 mb-4">
+                                Education
+                            </h2>
                         </div>
-                        <h3 class="font-poppins text-xl font-bold text-white mb-3">Amex Campus Challenge 2024</h3>
-                        <p class="text-gray-300 leading-relaxed">Collaborated in the Product Track to develop innovative solutions for real-world business challenges.</p>
+
+                        <div class="glass-panel p-6 rounded-2xl border border-slate-700/80 hover:border-sky-500/50 transition-all duration-300">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded border border-sky-500/30">
+                                    2022 – Present
+                                </span>
+                                <span class="text-xs text-slate-400 font-medium">Undergraduate</span>
+                            </div>
+                            <h3 class="font-poppins text-xl font-bold text-white mt-2">
+                                VIT Bhopal University
+                            </h3>
+                            <p class="text-slate-300 text-sm font-medium mt-1">
+                                Bachelor of Technology – Computer Science and Engineering
+                            </p>
+                            <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+                                Coursework & Focus: Data Structures & Algorithms, Database Management Systems (DBMS), Operating Systems, Software Engineering, and Python Systems Development.
+                            </p>
+                        </div>
                     </div>
+
+                    <!-- Achievements Column (7 cols) -->
+                    <div id="achievements" class="lg:col-span-7 space-y-6 reveal">
+                        <div>
+                            <span class="font-mono text-xs font-semibold text-amber-400 tracking-wider uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Honors & Competitions</span>
+                            <h2 class="font-poppins text-3xl font-bold text-white mt-3 mb-4">
+                                Achievements
+                            </h2>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Achievement 1 -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-700/70 hover:border-amber-500/40 transition-all duration-300 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-2">
+                                        <h4 class="font-poppins font-bold text-white text-base">Internal Finalist – Smart India Hackathon</h4>
+                                        <span class="font-mono text-xs text-amber-400">2024</span>
+                                    </div>
+                                    <p class="text-slate-300 text-xs sm:text-sm mt-1">
+                                        Selected as Internal Finalist for SIH 2024 with a prototype <strong class="text-white">Smart Yoga Mat for posture correction</strong> utilizing sensor integration and computer feedback.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Achievement 2 -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-700/70 hover:border-sky-500/40 transition-all duration-300 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 flex-shrink-0 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-2">
+                                        <h4 class="font-poppins font-bold text-white text-base">1st Runner-Up – Line Following Robo Race</h4>
+                                        <span class="font-mono text-xs text-sky-400">2024</span>
+                                    </div>
+                                    <p class="text-slate-300 text-xs sm:text-sm mt-1">
+                                        Achieved 1st Runner-Up (out of 20+ competing teams) demonstrating precision embedded control and autonomous algorithmic line navigation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Achievement 3 -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-700/70 hover:border-indigo-500/40 transition-all duration-300 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 flex-shrink-0 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-2">
+                                        <h4 class="font-poppins font-bold text-white text-base">Product Track – American Express Campus Challenge</h4>
+                                        <span class="font-mono text-xs text-indigo-400">2024</span>
+                                    </div>
+                                    <p class="text-slate-300 text-xs sm:text-sm mt-1">
+                                        Competed in the prestigious Amex Product Track, structuring data-driven solutions for financial product accessibility and client usability.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-6 ">
-            <div class="container mx-auto max-w-7xl ">
-                <div class="text-center mb-16">
-                    <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-4 reveal">
-                        Get In <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
+        <section id="contact" class="py-24 px-6 border-t border-slate-800/60 bg-slate-950/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="font-mono text-xs font-semibold text-sky-400 tracking-wider uppercase bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Get In Touch</span>
+                    <h2 class="font-poppins text-3xl sm:text-5xl font-bold text-white mt-3 mb-4">
+                        Let's <span class="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Connect</span>
                     </h2>
-                    <p class="text-gray-400 text-lg max-w-2xl mx-auto reveal">
-                        Ready to collaborate on your next project? Let's discuss how we can create something amazing together.
+                    <p class="text-slate-400 text-base sm:text-lg">
+                        Interested in discussing Python backend roles, automation architectures, or collaboration opportunities? Feel free to reach out.
                     </p>
                 </div>
-                <div class="grid lg:grid-cols-1 gap-12 items-start justify-items-center">
-                    <!-- Contact Info -->
-                    <div class="space-y-8">
-                        <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 reveal">
-                            <h3 class="font-poppins text-xl font-bold text-white mb-6">Contact Information</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-400 text-sm">Email</p>
-                                        <a href="mailto:akash324m@gmail.com" class="text-white hover:text-cyan-400 transition-colors duration-300">akash324m@gmail.com</a>
-                                    </div>
+
+                <div class="grid lg:grid-cols-12 gap-10 max-w-5xl mx-auto items-start">
+                    
+                    <!-- Contact Cards (5 cols) -->
+                    <div class="lg:col-span-5 space-y-4 reveal">
+                        <!-- Email Card -->
+                        <div class="glass-panel p-5 rounded-xl border border-slate-700/70 flex items-center justify-between group">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-11 h-11 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
                                 </div>
-                                
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-400 text-sm">Phone</p>
-                                        <a href="tel:+919163617752" class="text-white hover:text-cyan-400 transition-colors duration-300">+91 9163617752</a>
-                                    </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 font-mono">Email Address</p>
+                                    <a href="mailto:akash324m@gmail.com" class="text-slate-200 hover:text-sky-400 font-semibold text-sm transition-colors">
+                                        akash324m@gmail.com
+                                    </a>
                                 </div>
+                            </div>
+                            <button class="copy-btn p-2 rounded-lg text-slate-400 hover:text-sky-400" data-clipboard="akash324m@gmail.com" title="Copy Email">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="glass-panel p-5 rounded-xl border border-slate-700/70 flex items-center justify-between group">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 font-mono">Phone Number</p>
+                                    <a href="tel:+919560301169" class="text-slate-200 hover:text-emerald-400 font-semibold text-sm transition-colors">
+                                        +91 9560301169
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="copy-btn p-2 rounded-lg text-slate-400 hover:text-emerald-400" data-clipboard="+91 9560301169" title="Copy Phone">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="glass-panel p-5 rounded-xl border border-slate-700/70 flex items-center gap-3.5">
+                            <div class="w-11 h-11 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-mono">Location</p>
+                                <p class="text-slate-200 font-semibold text-sm">Delhi, India</p>
                             </div>
                         </div>
-                        
-                        <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 reveal">
-                            <h3 class="font-poppins text-xl font-bold text-white mb-6">Follow Me</h3>
-                            <div class="flex space-x-4">
-                                <a href="https://github.com/Akash324m" target="_blank" class="group w-12 h-12 bg-gray-700 hover:bg-gradient-to-r hover:from-gray-800 hover:to-black rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
-                                    <svg class="w-6 h-6 text-gray-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                                <a href="https://www.linkedin.com/in/akash-mishra-b36385250/" target="_blank" class="group w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                                    </svg>
-                                </a>
-                            </div>
+
+                        <!-- Social Buttons -->
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://github.com/Akash324m" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 glass-panel rounded-xl flex items-center justify-center gap-2 text-slate-300 hover:text-white hover:border-sky-500/50 transition-all font-medium text-xs sm:text-sm">
+                                <svg class="w-4 h-4 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/akash-mishra-b36385250/" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 glass-panel rounded-xl flex items-center justify-center gap-2 text-slate-300 hover:text-white hover:border-sky-500/50 transition-all font-medium text-xs sm:text-sm">
+                                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                                </svg>
+                                LinkedIn
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Direct Message Form (7 cols) -->
+                    <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-700/70 reveal">
+                        <h3 class="font-poppins text-xl font-bold text-white mb-2">Send a Message</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mb-6">Drop a note directly to my inbox for collaborations or hiring discussions.</p>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-300 mb-1.5" for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="Jane Doe" class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-300 mb-1.5" for="email">Your Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="jane@example.com" class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-1.5" for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Python Developer Opportunity / Discussion" class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-1.5" for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Write your message here..." class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors resize-none"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-bold text-sm transition-all duration-300 shadow-md shadow-sky-500/20 hover:shadow-sky-500/35 flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                            <div id="form-feedback" class="hidden text-center text-xs font-mono py-2 rounded"></div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="relative z-10 border-t border-gray-700/50 mt-20">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-center md:text-left">&copy; 2025 Akash Mishra. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#home" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Home</a>
-                    <a href="#projects" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Projects</a>
-                    <a href="#about" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">About</a>
-                    <a href="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Contact</a>
-                </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/80 py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-mono text-sky-400 font-bold">&lt;/&gt;</span>
+                <span class="text-slate-400 text-sm">
+                    Designed & Engineered by <strong class="text-slate-200 font-medium">Akash Mishra</strong> &bull; Python Developer
+                </span>
+            </div>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="#home" class="text-slate-400 hover:text-sky-400 transition-colors">Home</a>
+                <a href="#experience" class="text-slate-400 hover:text-sky-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-slate-400 hover:text-sky-400 transition-colors">Projects</a>
+                <a href="Akash Resume.pdf" download="Akash_Mishra_Resume.pdf" class="text-sky-400 hover:underline">Resume</a>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
